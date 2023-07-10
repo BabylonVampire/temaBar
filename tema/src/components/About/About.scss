@@ -1,0 +1,66 @@
+.about {
+	height: 40vh;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	background-color: #111111;
+	&__container {
+		display: flex;
+		> * {
+			flex: 1;
+		}
+		width: 70%;
+		color: #fff;
+	}
+	&__right,
+	&__left {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	&__heading {
+		margin-right: 1vh;
+		font-family: Arial;
+		font-size: calc(var(--index) * 3);
+		color: #fff;
+		margin: 0 0;
+	}
+	&__description {
+		&__contacts,
+		&__address,
+		&__workTime {
+			display: inline-flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	&__text {
+		font-family: Arial;
+		line-height: calc(var(--index) * 1.5);
+		font-size: var(--index);
+		color: #c9c9c9;
+	}
+}
+.workTime__bold,
+.address__bold,
+.contacts__bold {
+	font-weight: bold;
+	margin-right: 1vh;
+	font-family: Arial;
+	line-height: calc(var(--index) * 0.9);
+	font-size: calc(var(--index) * 0.7);
+	color: #c9c9c9;
+}
+
+.workTime__text,
+.address__text,
+.contacts__text {
+	margin-right: 1vh;
+	font-family: Arial;
+	line-height: calc(var(--index) * 0.9);
+	font-size: calc(var(--index) * 0.7);
+	color: #c9c9c9;
+}
