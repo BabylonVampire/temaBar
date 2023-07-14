@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import './Header.scss';
+import Icons from '../Icons/Icons';
 
 interface IHeaderOptions {
 	anchors: { link: string; text: string }[];
@@ -10,32 +11,39 @@ interface IHeaderOptions {
 
 const Header: FC<IHeaderOptions> = ({ anchors, contacts, metro, address }) => {
 	return (
-		<div className="header">
-			<div className="header__container">
+		<header className="header">
+			<div className="header-container">
 				<div className="header__topBox">
 					<div className="header__topBox__contacts">
 						{contacts.map((contact) => {
 							return <div className="contact">{contact}</div>;
 						})}
+						{/* <Icons /> */}
 					</div>
 					<div className="header__topBox__logo">
 						<div className="header__topBox__logo__pic" />
 					</div>
 					<div className="header__topBox__address">
 						<div className="metroBox">
-							<div className="metroDot" />
+							<div className="metroDot">
+								<span className="metroDot__number">1</span>
+							</div>
 							<div className="metro">{metro}</div>
 						</div>
-						<div className="address">{address}</div>
+						<address className="address">{address}</address>
 					</div>
 				</div>
-				<div className="header__anchors">
+				<nav className="header__anchors">
 					{anchors.map((anchor) => {
-						return <div className="anchor">{anchor.text}</div>;
+						return (
+							<a href={`${anchor.link}`}>
+								<div className="anchor">{anchor.text}</div>
+							</a>
+						);
 					})}
-				</div>
+				</nav>
 			</div>
-		</div>
+		</header>
 	);
 };
 

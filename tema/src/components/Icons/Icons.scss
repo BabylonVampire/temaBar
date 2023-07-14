@@ -1,0 +1,15 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+.social a {
+	color: #fff;
+}
+.icons {
+	&-container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		> * {
+			margin: calc(var(--index) * 0.3) calc(var(--index) * 0.5);
+		}
+	}
+}

@@ -1,0 +1,38 @@
+footer {
+	height: 10vh;
+	background-color: #0a0a0a;
+}
+
+.footer__contact {
+	color: #fff;
+	font-family: Arial;
+	font-weight: bold;
+	line-height: calc(var(--index));
+}
+.footer-box {
+	height: 8vh;
+	display: flex;
+	> * {
+		color: #fff;
+		font-family: Arial;
+		font-weight: bold;
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+	}
+	&__contacts {
+	}
+	&__address {
+	}
+}
+
+.footer-copyrights {
+	margin-left: calc(var(--index));
+	height: 2vh;
+	background-color: #000;
+	color: #fff;
+	font-family: Arial;
+}

@@ -3,30 +3,44 @@ import About from '../About/About';
 import Header from '../Header/Header';
 import Hero from '../Hero/Hero';
 import Sales from '../Sales/Sales';
+import Footer from '../Footer/Footer';
+import BarMenu from '../Menu/Menu';
+import Contacts from '../Contacts/Contacts';
+import * as data from '../../data.ts';
+import OrderButton from '../OrderButton/OrderButton.tsx';
 
 const Main = () => {
 	return (
-		<div className="Main">
+		<main className="Main">
 			<Header
-				anchors={[
-					{ link: '', text: 'Акции' },
-					{ link: '', text: 'Акции' },
-					{ link: '', text: 'Акции' },
-				]}
-				contacts={['+7 (968) 624-27-20', '+7 (495) 824-27-20']}
-				metro="Чистые пруды"
-				address="Потаповский переулок 5/2"
+				anchors={data.anchors}
+				contacts={data.contacts}
+				metro={data.metro}
+				address={data.address}
 			/>
 			<Hero />
+			<OrderButton />
 			<About
-				heading="ТЕМА БАР В МОСКВЕ"
-				text="ТЕМА-БАР - это коктейльный бар на Потаповском переулке в 3 минутах от м. Чистые пруды, где с четверга по воскресенье проходят вечеринки в стиле open format, DJ и танцами на барной стойке. На нижнем этаже есть зал с КАРАОКЕ, который работает каждый день с 20:00. Since 2006"
-				address="Потаповский пер. д.5 стр.2., Москва"
-				contacts="+7 (495) 624-27-20, +7 (968) 824-27-20"
-				workTime=" ПН-ЧТ 18:00-06:00; ПТ-ВС 18:00-09:00"
+				address={data.address}
+				heading={data.about.heading}
+				text={data.about.text}
+				contacts={data.about.contacts}
+				workTime={data.about.workTime}
 			/>
-			<Sales sales={[]} />
-		</div>
+			<Sales sales={data.sales} />
+			<OrderButton />
+			<BarMenu
+				heading={data.barMenu.heading}
+				description={data.barMenu.description}
+			/>
+			<Contacts address={data.address} contacts={data.contacts} />
+			<OrderButton />
+			<Footer
+				contacts={data.contacts}
+				address={data.address}
+				copyrights={data.copyrights}
+			/>
+		</main>
 	);
 };
 

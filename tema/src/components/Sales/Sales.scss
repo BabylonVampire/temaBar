@@ -7,10 +7,13 @@
 	align-items: center;
 	justify-content: center;
 	&__heading {
-		margin-right: 1vh;
+		display: flex;
 		font-family: Arial;
 		font-size: calc(var(--index) * 3);
 		color: #fff;
 		margin: 0 0;
+		align-items: center;
+		flex-direction: column;
+		text-shadow: 0 0 10px #db25e8;
 	}
 }

@@ -1,0 +1,39 @@
+.contacts {
+	width: 100%;
+	height: 60vh;
+	&__heading {
+		// margin-bottom: calc(var(--index) * 2);
+		margin-top: calc(var(--index) * 2);
+		display: flex;
+		font-family: Arial;
+		font-size: calc(var(--index) * 3);
+		color: #fff;
+		align-items: center;
+		flex-direction: column;
+		text-shadow: 0 0 10px #db25e8;
+	}
+	&-container {
+		height: 50vh;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		&-contacts {
+			&__phones {
+				> * {
+					text-align: center;
+				}
+			}
+			&__address {
+				line-height: calc(var(--index) * 3);
+				font-family: Arial;
+				font-size: calc(var(--index) * 1);
+				color: #fff;
+			}
+		}
+		&__map {
+			// border: solid calc(var(--index) * 0.8) #7b287e;
+			box-shadow: 0 0 20px 4px #fe45ff;
+		}
+	}
+}

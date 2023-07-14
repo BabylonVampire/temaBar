@@ -1,33 +1,53 @@
-import React from 'react';
-import './Hero.sass';
+import { CSSProperties } from 'react';
+import './Hero.scss';
 import { Carousel } from 'antd';
 
-const contentStyle: React.CSSProperties = {
+const contentStyle__1: CSSProperties = {
 	height: '75vh',
-	color: '#fff',
-	lineHeight: '160px',
-	textAlign: 'center',
-	background: '#364d79',
+	backgroundSize: 'cover',
+	backgroundRepeat: 'no-repeat',
+	backgroundImage: 'url(/src/assets/carousel_1.jpg)',
+};
+
+const contentStyle__2: CSSProperties = {
+	height: '75vh',
+	backgroundSize: 'cover',
+	backgroundRepeat: 'no-repeat',
+	backgroundImage: 'url(/src/assets/carousel_2.jpg)',
+};
+
+const contentStyle__3: CSSProperties = {
+	height: '75vh',
+	backgroundSize: 'cover',
+	backgroundRepeat: 'no-repeat',
+	backgroundImage: 'url(/src/assets/carousel_3.jpg)',
+};
+
+const contentStyle__4: CSSProperties = {
+	height: '75vh',
+	backgroundSize: 'cover',
+	backgroundRepeat: 'no-repeat',
+	backgroundImage: 'url(/src/assets/carousel_4.jpg)',
 };
 
 const Hero = () => {
 	return (
-		<div className="hero">
+		<section className="hero">
 			<Carousel autoplay>
 				<div>
-					<h3 style={contentStyle}>1</h3>
+					<div style={contentStyle__1} />
 				</div>
 				<div>
-					<h3 style={contentStyle}>2</h3>
+					<div style={contentStyle__2} />
 				</div>
 				<div>
-					<h3 style={contentStyle}>3</h3>
+					<div style={contentStyle__3} />
 				</div>
 				<div>
-					<h3 style={contentStyle}>4</h3>
+					<div style={contentStyle__4} />
 				</div>
 			</Carousel>
-		</div>
+		</section>
 	);
 };
 

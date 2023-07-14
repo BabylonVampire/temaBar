@@ -1,5 +1,5 @@
 import './About.scss';
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 interface IAboutProps {
 	heading: string;
@@ -17,8 +17,8 @@ const About: FC<IAboutProps> = ({
 	workTime,
 }) => {
 	return (
-		<div className="about">
-			<div className="about__container">
+		<section className="about" id="about">
+			<div className="about-container">
 				<div className="about__right">
 					<div className="about__heading">
 						ТЕМА БАР
@@ -26,24 +26,26 @@ const About: FC<IAboutProps> = ({
 					</div>
 					<div className="about__description">
 						<div className="about__description__address">
-							<div className="address__bold">Адресс: </div>
-							<div className="address__text">{address}</div>
+							<p className="address__bold">Адресс: </p>
+							<address className="address__text">
+								{address}
+							</address>
 						</div>
 						<div className="about__description__contacts">
-							<div className="contacts__bold">Контакты: </div>
+							<p className="contacts__bold">Контакты: </p>
 							<div className="contacts__text">{contacts}</div>
 						</div>
 						<div className="about__description__workTime">
-							<div className="workTime__bold">Время работы: </div>
-							<div className="workTime__text">{workTime}</div>
+							<p className="workTime__bold">Время работы: </p>
+							<time className="workTime__text">{workTime}</time>
 						</div>
 					</div>
 				</div>
 				<div className="about__left">
-					<div className="about__text">{text}</div>
+					<article className="about__text">{text}</article>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 

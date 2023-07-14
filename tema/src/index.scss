@@ -2,6 +2,38 @@
 	margin: 0 auto;
 	padding: 0;
 }
+
+html {
+	scroll-behavior: smooth;
+}
+
 :root {
 	--index: calc(1vh + 1vw);
+}
+
+@font-face {
+	font-family: moscowsans;
+	src: url(/src/fonts/moscowsansregular/moscowsansregular.ttf);
+}
+
+@font-face {
+	font-family: BebasNeue;
+	src: url(/src/fonts/bebasneue/BebasNeueRegular.ttf);
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+	background: #c9c9c9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #7a7a7a;
 }
