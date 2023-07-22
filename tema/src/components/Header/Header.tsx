@@ -1,6 +1,5 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import './Header.scss';
-import Icons from '../Icons/Icons';
 
 interface IHeaderOptions {
 	anchors: { link: string; text: string }[];
@@ -18,7 +17,6 @@ const Header: FC<IHeaderOptions> = ({ anchors, contacts, metro, address }) => {
 						{contacts.map((contact) => {
 							return <div className="contact">{contact}</div>;
 						})}
-						{/* <Icons /> */}
 					</div>
 					<div className="header__topBox__logo">
 						<div className="header__topBox__logo__pic" />

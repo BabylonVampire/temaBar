@@ -22,7 +22,6 @@ const Main = () => {
 			<OrderButton />
 			<About
 				address={data.address}
-				heading={data.about.heading}
 				text={data.about.text}
 				contacts={data.about.contacts}
 				workTime={data.about.workTime}

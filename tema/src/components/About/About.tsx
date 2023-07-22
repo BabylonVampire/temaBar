@@ -2,20 +2,13 @@ import './About.scss';
 import { FC } from 'react';
 
 interface IAboutProps {
-	heading: string;
 	text: string;
 	address: string;
 	contacts: string;
 	workTime: string;
 }
 
-const About: FC<IAboutProps> = ({
-	heading,
-	text,
-	address,
-	contacts,
-	workTime,
-}) => {
+const About: FC<IAboutProps> = ({ text, address, contacts, workTime }) => {
 	return (
 		<section className="about" id="about">
 			<div className="about-container">
