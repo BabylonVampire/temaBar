@@ -33,6 +33,7 @@
 			text-shadow: 0 0 20px #db25e8;
 		}
 		&__description {
+			text-align: center;
 			margin-top: calc(var(--index) * 2);
 			color: #cecece;
 			font-size: calc(var(--index) * 1.5);

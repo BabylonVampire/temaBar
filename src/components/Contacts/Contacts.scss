@@ -37,3 +37,15 @@
 		}
 	}
 }
+
+@media (max-width: 700px) {
+	.contacts-container {
+		height: 55vh;
+		flex-direction: column-reverse;
+		margin-top: calc(var(--index) * 3);
+		&-contacts {
+			margin-top: calc(var(--index) * 3);
+			margin-bottom: calc(var(--index) * 3);
+		}
+	}
+}

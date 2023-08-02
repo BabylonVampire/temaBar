@@ -36,3 +36,12 @@ footer {
 	color: #fff;
 	font-family: Arial;
 }
+
+@media (max-width: 500px) {
+	.footer-box {
+		flex-direction: column;
+	}
+	.footer__contact {
+		line-height: calc(var(--index) * 1.5);
+	}
+}
